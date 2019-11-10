@@ -1,0 +1,24 @@
+doctype html
+html
+    head
+        meta(charset="utf-8")
+        title Weather - Temp
+        //- link(rel="stylesheet" href="./css/style.css")
+        //- link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine")
+        style
+            include ../css/style.css
+    body
+        .header
+            h1 Find Weather In Your City
+        .container
+            form(action="/" method="post")
+                input(type="text",name="city", placeholder="Enter Your City Name")
+                br
+                br
+                input.sbt-btn(type="submit" name="submit" value="Get Weather")
+            if(weather !== null)
+                h2= weather
+            if(error !== null)
+                h2= error
+
+
